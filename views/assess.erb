@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <style type="text/css">
+      #map-canvas { height: 600px; width: 800px;}
+    </style>
+    
+    <button></button>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=GMAPKEY"></script>
+  </head>
+  <body>
+  <h2 type="text">Lat = <%= lat  %></h2>
+    <h3 type="text">Long = <%= lng  %></h3>
+    <div id="map-canvas"></div>
+    <script>
+    
+    var mapOptions = {
+        center: { lat: <%= lat %>, lng: <%= lng  %>},
+        zoom: 9
+      };
+      var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+     
+      
+    </script>
+  </body>
+</html>
